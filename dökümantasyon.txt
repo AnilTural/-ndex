@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Dokumantasyon</title>
+<style>
+    .btn1 {
+        background-color:#44c767;
+        border:1px solid #18ab29;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:19px;
+        padding:20px 63px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #2f6627;
+    }
+    .btn1:hover {
+        background-color:#5cbf2a;
+    }
+    .btn1:active {
+        position:relative;
+        top:1px;
+    }
+</style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h2>XAMPP</h2>
+<p> XAMPP bize apache ve mysql kurulu bir server yapýsý saðlamaktadýr. Sadece bunu kullanarak bir web sayfasý kolaylýkla ayaða kaldýrýlabilir ve kullanýmý kolaydýr.</p>
+<p> Kurulum baþlatýldýktan sonra bize yüklenmesi istediðimiz yeri sorar. Deðiþiklik yapmazsak C:/ dizini altýna yükleyecektir ve bu en doðru seçimdir. Sonraki sayfalarda da "Apache server'ý ekle" gibi bir seçenek gelene kadar deðiþiklik yapýlmaz.</p>
+<p> Apache Server, Mysql ve FileZilla seçeneklerinin ayný sekmede olduðu noktaya gelinir. Buradan Apache ve Mysql seçeneklerinin seçili olmasý zorunludur. Filezilla bir Ftp uygulamasýdýr ve localde çalýþacaðýmýz için kullanýlmayacaktýr yani kullanýcýnýn isteðine baðlýdýr.</p>
+<h1>Apache</h1>
+<p>Uygulamamýzý ayaða kaldýracaðýmýz server Apache'dir. Ekstradan kurulumu daha farklý maliyetlere sebep olabileceði için XAMPP ile gelen versiyonunun kullanýlmasý tavsiye edilir.</p>
+<h1>MySql</h1>
+<p>Veritabaný yönetim sistemi olarak Mysql kullanýlmýþtýr. Bu veritabaný da XAMPP içerisinde mevcuttur. Uygulamamýzýn rar dosyasýnda kullandýðýmýz veritabaný bulunmaktadýr ve websitesinin kurulumu sýrasýnda nasýl uygulamaya dahil edileceði açýklanmýþtýr.</p>
+<h1>Windows</h1>
+<p> Uygulamamýz Windows iþletim sistemi üzerinde ayaða kaldýrýlmýþtýr. Baþka bir iþletim sistemi üzerinde çalýþtýrýldýðýnda, Command Injection örneklerimiz iþletim sistemine özel komutlar içerdiði için kullanýlamaz </p>
+<h1>Uygulamanýn Kurulumu</h1>
+<p>Hiçbir deðiþiklik yapýlmadýðý takdirde XAMPP uygulamasý "C:/xampp" klasörüne yüklenir. Bizim kullanacaðýmýz tüm gerekli dosyalar bu klasörün içerisindedir. Öncelikle klasör açýlýr ve C:/xampp/htdocs klasörüne gelinir. Ýçerisindeki dosyalarýn hepsini silmek bize daha rahat bir hareket alaný saðlayacaktýr.</p>
+<p> Boþalan klasöre bizim .rar uzantýlý dosyamýzý tamamen çýkartýrýz. Bu klasör Apache serverýn Localhosta sunduðu http kýsmýdýr ve içerisine atýlan her web sayfasýný browserda ayaða kaldýrýr. Çýkarttýðýmýz rar dosyasýndan sql uzantýlý dosyayý baþka yere aktarabiliriz.</p>
+<p> Dosya atma iþleminden sonra Xampp Control Panel açýlýr. karþýmýza 4-5 tane seçenek gelecektir. Apache ve Mysql seçenekleri için Start'a týklanýr. Yeþil yanarsa çalýþýyor demektir.</p>
+<p> Mysql çalýþtýrýldýktan sonra Admin yazan butona týklanýr ve bizi mysql yönetici paneline yönlendirecektir. Bu sayfa üzerinde üst kýsýmda "Ýçe aktar" yazan bir kýsým vardýr. Buraya týklanýr ve uygulamamýzla beraber gelen sql dosyasý seçilir ve herþey olduðu gibi býrakýlarak kurulum bitirilir. Artýk websitemiz çalýþtýrýlabilir.</p>
+<p> Uygulamamýza Browser üzerinden "Localhost/" þeklinde eriþim saðlanýr. Burada uygulamamýzý klasör olarak göreceðiz ve bu klasörü açýnca bizi websitemizin default sayfasýna yönlendirecektir. Localhost açýlmazsa Apacheye start verememiþiz demektir. Windows makinelerde bunun en olasý sebebi 80 portunun dolu olmasý(Skype gibi programlar kullanýr.) ve Apache'nin de o portu kullanmaya çalýþmasýdýr. Apache config kýsmýnda port 80 yazan her yer yeni kullanmak istediðimiz port ile deðiþtirilirse bu sorun da çözülecektir.</p>
+<p> Uygulamanýn çalýþtýrýlacaðý browser Mozilla veya Internet Explorer olarak seçilebilir. Chrome üzerinde bazý açýklarýn sömürülmesine izin verilmemektedir. Mozilla ayrýca çalýþtýrýlmasý için "about:config" içerisinde script filtrelemeyi kapatmamýzý gerektirmektedir. Diðer browserlarda denenmemiþtir.</p>
+<form action="./main.php" method="get">
+    <input type="submit" value="Ana Menü" class="btn1">
+</form>
+</body>
+</html>
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+?>
